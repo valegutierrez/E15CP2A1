@@ -7,9 +7,11 @@
 ## Ejercicio 1:
 
 > En este ejercicio se utilizó la gema carrierwave para el manejo de archivos por lo que antes de empezar tendrás que instalar imagemagik en tu computador. Si ya la has instalado antes, omite este paso.
-
+> 
+> Más informacion en <a href="https://github.com/carrierwaveuploader/carrierwave/tree/v1.1.0">Documentación carrierwave</a>
+>
 > **OSX** ```brew install imagemagick``` 
-
+>
 > **Ubuntu** ```sudo apt-get update``` y luego ```sudo apt-get install imagemagick``` 
 
 - Crear un modelo **user** con los campos *name* (string), *email* (string) y *password* (string).
@@ -45,15 +47,6 @@
 
 - Crear los métodos current_user y logged? en **UsersHelper**.
  
-	~~~ruby
-	def current_user
-		User.find(session[:user_id])
-  	end
-
-  	def logged?
-		session[:user_id].present? ? true : false
-  	end
-	~~~
 	
 - Añadir ruta de **sessions** para crear y destruir sesion de usuario.
 
@@ -72,3 +65,8 @@
 - Agregar las rutas para logear un usuario.
 
 - Crear el método new de **sessions**, agregar su ruta respectiva, y añadir la vista con un formulario de logueo.
+
+- Añadir usuario a history.
+	> Utilizar current_user para guardar el dato en la base de datos en el método create.
+
+- Crear vista con las historias que le pertenecen al usuario.
