@@ -6,7 +6,11 @@
 
 ## Ejercicio 1:
 
+> En este ejercicio se utilizó la gema carrierwave para el manejo de archivos por lo que antes de empezar tendrás que instalar imagemagik en tu computador. Si ya la has instalado antes, omite este paso.
 
+> **OSX** ```brew install imagemagick``` 
+
+> **Ubuntu** ```sudo apt-get update``` y luego ```sudo apt-get install imagemagick``` 
 
 - Crear un modelo **user** con los campos *name* (string), *email* (string) y *password* (string).
 
@@ -63,4 +67,8 @@
 
 - Agregar un link para que el usuario pueda cerrar su sesión (solo en caso que haya iniciado sesión).
 
+- Agregar un link para que el usuario pueda registrarse o iniciar sesión (solo en caso que NO haya iniciado sesión).
+
 - Agregar las rutas para logear un usuario.
+
+- Crear el método new de **sessions**, agregar su ruta respectiva, y añadir la vista con un formulario de logueo.
