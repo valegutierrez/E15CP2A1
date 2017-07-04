@@ -28,12 +28,15 @@
 
 - Agregar a **History** una foreign key que haga referencia al usuario.
 
-- El usuario será asignado a la nueva historia creada, al momento de guardar los datos del objeto.
+- Al momento de crear una nueva historia, asignar el usuario creador a la historia creada.
+	> Método create en controlador de Historias
 
-- Crear el campo name y username en el modelo **User**.
+- Añadir el campo name (string), username (string) y admin (boolean) en el modelo **User**.
 	> Revisar documentación de <a href="https://github.com/plataformatec/devise">devise</a>.
 
-- Añadir estos campos a los formularios de devise.
+- Añadir los campos name y username a los formularios de devise.
+
+- Validar en modelo user el campo name como obligatorio, y el campo username como obligatorio y único. 
 
 - Modificar el menú para que, cuando el usuario no se encuentre conectado, muestre los link de login y registro, y cuando se encuentre conectado, muestre los link de editar registro y cerrar sesión.
 
@@ -43,4 +46,10 @@
 
 - Si el usuario está conectado, el usuario solo podrá modificar las historias que le pertenecen.
 
+- Si el usuario conectado es admin, el usuario podrá modificar todas las historias.
+
 - Crear vista con las historias que le pertenecen al usuario.
+
+- Crear un panel de control de usuarios al que solo tendrán acceso los usuarios admin.
+
+- En el panel de control de usuarios, añadir al formulario de user la opción para dar o quitar el privilegio de admin.
