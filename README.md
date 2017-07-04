@@ -1,18 +1,19 @@
-# Actividad 029 - Autenticación manual
+# Actividad 030 - Autenticación con Devise
 
 - Para poder realizar este actividad debes haber realizado los cursos previos junto con los videos online correspondientes a la experiencia 15.
 
-### El objetivo de esta actividad es la implementación de un Sistema de autenticación manual para permitir el logeo de un usuario en una aplicación.
+### El objetivo de esta actividad es la implementación de un Sistema de autenticación con Devise para permitir el logeo de un usuario en una aplicación.
 
 ## Ejercicio 1:
 
-> En este ejercicio se utilizó la gema carrierwave para el manejo de archivos por lo que antes de empezar tendrás que instalar imagemagik en tu computador. Si ya la has instalado antes, omite este paso.
+> En este ejercicio se utilizó la gema carrierwave para el manejo de archivos por lo que antes de empezar tendrás que instalar imagemagik en tu computador. Si ya lo has instalado antes, omite este paso.
 > 
-> Más informacion en <a href="https://github.com/carrierwaveuploader/carrierwave/tree/v1.1.0">Documentación carrierwave</a>
->
 > **OSX** ```brew install imagemagick``` 
 >
-> **Ubuntu** ```sudo apt-get update``` y luego ```sudo apt-get install imagemagick``` 
+> **Ubuntu** ```sudo apt-get update``` y luego ```sudo apt-get install imagemagick```
+> 
+> Más informacion en <a href="https://github.com/carrierwaveuploader/carrierwave/tree/v1.1.0">Documentación carrierwave</a>
+
 
 - Agregar la gema *devise* al gemfile.
 	> gem 'devise', git: 'https://github.com/plataformatec/devise.git'
