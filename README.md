@@ -14,59 +14,32 @@
 >
 > **Ubuntu** ```sudo apt-get update``` y luego ```sudo apt-get install imagemagick``` 
 
-- Crear un modelo **user** con los campos *name* (string), *email* (string) y *password* (string).
+- Agregar la gema *devise* al gemfile.
+	> gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 
-- Generar la ruta para la creación y la vista de new de un usuario.
+- Generar los archivos de devise.
 
-    ~~~ruby
-   get 'users/sign_up', to: "users#new"
-  	post 'users', to: "users#create"
-    ~~~
+- Crear un modelo "deviseado" de **User**.
 
-- En la terminal ejecutar **rails routes** para corroborar las ruta creada. La ruta generada debe apuntar a los métodos **users#new** y **users#create**.
+- Crear las vistas de devise.
 
-- Crear un controlador de *users* vacío.
+- Aplicar diseño a las vistas de devise, acorde al diseño de la aplicación.
 
-- En el controller **users** crear el método **new**. 
+- Agregar a **History** una foreign key que haga referencia al usuario.
 
-- En el controller **users** crear el método **user_params**. Este método debe permitir y retornar los campos necesarios para la creación de un nuevo usuario, es decir, name, email y password.
+- El usuario será asignado a la nueva historia creada, al momento de guardar los datos del objeto.
 
-- En el controller **users** crear el método **create**. Este método debe generar una nueva instancia de *User* recibiendo como argumento **user_params** y almacenarlo en la BD. Luego, si el usuario es creado exitosamente, agregar **@user.id** a una variable de session (**session[:user_id]**) y redireccionar al *root_path*, en caso de error, que haga render del método *new*.
+- Crear el campo name y username en el modelo **User**.
+	> Revisar documentación de <a href="https://github.com/plataformatec/devise">devise</a>.
 
-- En la vista *New* de users se debe agregar un formulario que permita ingresar un nuevo usuario.
+- Añadir estos campos a los formularios de devise.
 
-    - El formulario debe ser generado utilizando el helper *form_with* añadiendo el modelo y debe implementar las clases de bootstrap (revisar docs).
+- Modificar el menú para que, cuando el usuario no se encuentre conectado, muestre los link de login y registro, y cuando se encuentre conectado, muestre los link de editar registro y cerrar sesión.
 
-    ~~~ruby
-    <%= form_with(model: @user) do |form| %>
-    ~~~
+- El usuario no conectado solo podrá ver index de History, si quiere entrar en otra página debe solicitar login.
 
-    - Donde **@user** debe ser declarado en el método correspondiente (new) como una nueva instancia de **User**.
+- Modificar la vista index de History, si el usuario no está conectado solo mostrará el botón de show en cada uno de los thumbnails.
 
-    - El formulario debe tener el campo para *name*, *email* y *password*.
-
-- Crear los métodos current_user y logged? en **UsersHelper**.
- 
-	
-- Añadir ruta de **sessions** para crear y destruir sesion de usuario.
-
-	~~~ruby
-	resources :sessions, only: [:create, :destroy]
-	~~~
-
-- Crear controller de **sessions** vacío.
-
-- En controlador de **sessions** crear método *destroy* reseteando las variables de sesion y redireccionando a la página root.
-
-- Agregar un link para que el usuario pueda cerrar su sesión (solo en caso que haya iniciado sesión).
-
-- Agregar un link para que el usuario pueda registrarse o iniciar sesión (solo en caso que NO haya iniciado sesión).
-
-- Agregar las rutas para logear un usuario.
-
-- Crear el método new de **sessions**, agregar su ruta respectiva, y añadir la vista con un formulario de logueo.
-
-- Añadir usuario a history.
-	> Utilizar current_user para guardar el dato en la base de datos en el método create.
+- Si el usuario está conectado, el usuario solo podrá modificar las historias que le pertenecen.
 
 - Crear vista con las historias que le pertenecen al usuario.
