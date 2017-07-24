@@ -37,9 +37,9 @@ Más información en <a href="https://github.com/carrierwaveuploader/carrierwave
 
 ## Comienza la actividad
 
-Pictoy es una aplicación para que diversos usuarios guarden sus historias y puedan compartirlas, pero esta aplicación no está terminadam, el cliente pide:
+Pictory es una aplicación para que diversos usuarios guarden sus historias y puedan compartirlas, pero esta aplicación no está terminada, el cliente pide:
 
-- Forkear y descargar la aplicación.
+- Realizar un fork y descargar la aplicación.
 
 - Agregar la gema *devise* al gemfile.
 	> gem 'devise', git: 'https://github.com/plataformatec/devise.git'
@@ -82,7 +82,6 @@ Pictoy es una aplicación para que diversos usuarios guarden sus historias y pue
 - Crear un panel de control de usuarios al que solo tendrán acceso los usuarios admin.
 	> El panel de control es solo una acción especial nueva, que muestra todos los usuarios
 	> Esta acción solo debe ser accesible para un usuario con el rol admin.
-
 
 - Dentro del panel de control de usuarios, añadir al formulario de user la opción para dar o quitar el privilegio de admin.
 	- Estas acciones solo deben estar disponibles para un usuario con el rol admin.
