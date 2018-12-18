@@ -1,6 +1,8 @@
 # Actividad Presencial Semana 15
 ## Autenticación con Devise (Experiencia presencial 2)
 
+Esta aplicación fue creada en Rails, se puede acceder a ella haciendo click [aquí.](https://warm-springs-49816.herokuapp.com/)
+
 Para poder realizar este actividad debes haber realizado los cursos previos junto con los videos online correspondientes a la experiencia 15.
 
 El objetivo de esta actividad es la implementación de un Sistema de autenticación con Devise para permitir el ingreso de un usuario en una aplicación.
